@@ -6,6 +6,9 @@ let answer = '';
 
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
+    if (display.textContent === 'Error') {
+      display.textContent = '0';
+    }
     if (button.innerHTML === '=') {
       if (display.textContent !== '0') {
         try {
