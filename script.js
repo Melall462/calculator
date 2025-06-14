@@ -9,10 +9,11 @@ buttons.forEach((button) => {
     if (display.textContent === 'Error') {
       display.textContent = '0';
     }
+
     if (button.innerHTML === '=') {
       if (display.textContent !== '0') {
         try {
-          answer = eval(equation)
+          answer = Math.round(eval(equation) * 100) / 100;
           equation = answer.toString();  
         } catch (e) {
           equation = 'Error';
